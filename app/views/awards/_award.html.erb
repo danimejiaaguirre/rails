@@ -1,0 +1,12 @@
+<tr id=<%= "award_#{award.id}" %>>
+  <td><%= link_to award.id, edit_award_path(award), :remote => true %></td>
+  <td><%= award.name %></td>
+  <td>
+    <%= link_to 'Mostrar', award, :remote => true, :class => 'btn btn-mini' %>
+    <%= link_to 'Editar', edit_award_path(award), :remote => true,
+        :class => 'btn btn-mini' %>
+    <%= link_to 'Eliminar', award, 
+        :data => { :confirm => 'Esta Seguro?' },
+        :method => :delete, :remote => true, :class => 'btn btn-mini btn-danger' %>
+  </td>
+</tr>

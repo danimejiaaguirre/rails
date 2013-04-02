@@ -1,0 +1,26 @@
+
+<ul class="nav">
+<!-- if user_signed_in? %> -->
+<li>
+<li>
+<%= link_to('Equipos', teams_path) %>
+</li>
+</li>
+<li>
+<%= link_to('Logout', "#", :method=>'delete') %>
+</li>
+<!-- else %> -->
+<li>
+<%= link_to('Login', "") %>
+</li>
+<!-- end %> -->
+<!-- if user_signed_in? %> -->
+<li>
+<%= link_to('Edit account', "") %>
+</li>
+<!-- else %> -->
+<li>
+<%= link_to('Sign up', "") %>
+</li>
+<!-- end %> -->
+</ul>

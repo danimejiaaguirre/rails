@@ -1,0 +1,12 @@
+<%= simple_form_for(@award, :html => { :class => 'form-horizontal' }, :remote => true) do |f| %>
+
+  <%= f.error_notification %>
+  <%= display_base_errors @award %>
+
+  <%= f.input :name, :label => "Nombre",  :required => true %>
+  
+  <div class="form-actions">
+    <%= f.submit "guardar", :class => 'btn btn-primary' %>
+    <%= link_to 'Atras', awards_path, :class => 'btn btn-small' %>
+  </div>
+<% end %>

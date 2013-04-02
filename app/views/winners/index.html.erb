@@ -1,0 +1,42 @@
+<%- model_class = Winner -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human.pluralize %></h1>
+</div>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th><%= model_class.human_attribute_name(:id) %></th>
+      <th><%= model_class.human_attribute_name(:nameteam) %></th>
+      <th><%= model_class.human_attribute_name(:namemember) %></th>
+      <th><%= model_class.human_attribute_name(:score) %></th>
+      <th><%= model_class.human_attribute_name(:dategame) %></th>
+      <th><%= model_class.human_attribute_name(:created_at) %></th>
+      <th><%=t '.actions', :default => t("helpers.actions") %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @winners.each do |winner| %>
+      <tr>
+        <td><%= link_to winner.id, winner_path(winner) %></td>
+        <td><%= winner.nameteam %></td>
+        <td><%= winner.namemember %></td>
+        <td><%= winner.score %></td>
+        <td><%= winner.dategame %></td>
+        <td><%=l winner.created_at %></td>
+        <td>
+          <%= link_to t('.edit', :default => t("helpers.links.edit")),
+                      edit_winner_path(winner), :class => 'btn btn-mini' %>
+          <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+                      winner_path(winner),
+                      :method => :delete,
+                      :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+                      :class => 'btn btn-mini btn-danger' %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to t('.new', :default => t("helpers.links.new")),
+            new_winner_path,
+            :class => 'btn btn-primary' %>

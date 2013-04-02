@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  answer: 
+  question: 
+  team: 
+  ok: false
+
+two:
+  answer: 
+  question: 
+  team: 
+  ok: false

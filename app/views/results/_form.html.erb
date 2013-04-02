@@ -1,0 +1,12 @@
+<%= simple_form_for(@result, :html => { :class => 'form-horizontal' }, :remote => true) do |f| %>
+
+  <%= f.error_notification %>
+  <%= display_base_errors @result %>
+
+  <%= f.input :answer_id, :label => "Repuestas",  :required => true %>
+  
+  <div class="form-actions">
+    <%= f.submit "guardar", :class => 'btn btn-primary' %>
+    <%= link_to 'Atras', results_path, :class => 'btn btn-small' %>
+  </div>
+<% end %>

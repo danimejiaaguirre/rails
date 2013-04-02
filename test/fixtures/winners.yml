@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  nameteam: MyString
+  namemember: MyString
+  score: 1
+  dategame: 2013-01-27
+
+two:
+  nameteam: MyString
+  namemember: MyString
+  score: 1
+  dategame: 2013-01-27

@@ -1,0 +1,10 @@
+<%- model_class = Question -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human %></h1>
+</div>
+
+<div class='Question'>
+  <p>id: <%= @question.id %></p>
+  <p>descripcion: <%= @question.description %></p>
+</div>
+
